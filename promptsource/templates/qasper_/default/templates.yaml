@@ -1,0 +1,123 @@
+dataset: qasper_
+subset: default
+templates:
+  464131b4-966a-420e-adad-8e5e772cebe1: !Template
+    answer_choices: null
+    id: 464131b4-966a-420e-adad-8e5e772cebe1
+    jinja: "Passage: {{evidence}}\nQuestion: {{question}} ||| \nEvidence: {{highlighted_evidence}}\n\
+      Answer: {{answer}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: PQA
+    reference: ''
+  4aa5d85f-dad1-4238-8732-3f43be4a0db1: !Template
+    answer_choices: null
+    id: 4aa5d85f-dad1-4238-8732-3f43be4a0db1
+    jinja: "Question: {{question}}\nPassage: {{evidence}} ||| Evidence: {{highlighted_evidence}}\
+      \ \nAnwer: {{answer}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: QPA
+    reference: ''
+  8270a139-7480-48b4-890b-146fc96b8346: !Template
+    answer_choices: null
+    id: 8270a139-7480-48b4-890b-146fc96b8346
+    jinja: 'Answer the following question, {{question}}.
+
+      {{evidence}}||| Evidence: {{highlighted_evidence}}
+
+      Answer: {{answer}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: answer-the-following
+    reference: ''
+  9648f974-eb61-41b3-953f-f793e3305692: !Template
+    answer_choices: null
+    id: 9648f974-eb61-41b3-953f-f793e3305692
+    jinja: "Given a passage from scientific literature, answer the following question.\n\
+      {{evidence}}\n{{question}} ||| Evidence: {{highlighted_evidence}} \nAnswer:\
+      \ {{answer}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: definition
+    reference: ''
+  aafb7bfd-3361-4eff-a860-f969f38a0e9b: !Template
+    answer_choices: null
+    id: aafb7bfd-3361-4eff-a860-f969f38a0e9b
+    jinja: 'In the following passage, answer the following question with the help
+      of the context.
+
+      {{question}}
+
+      {{evidence}} ||| Evidence: {{highlighted_evidence}}
+
+      Answer: {{answer}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: in-the-passage
+    reference: ''
+  b319fd51-f4fe-47ca-a5b6-5cf2c06a4792: !Template
+    answer_choices: null
+    id: b319fd51-f4fe-47ca-a5b6-5cf2c06a4792
+    jinja: '{{question}}
+
+      Answer using extracts from the following context.
+
+      {{evidence}} ||| Evidence: {{highlighted_evidence}}
+
+      Answer: {{answer}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: answer-q-with-context-after
+    reference: ''
+  d45f6dc9-fe8b-4393-904d-ab71a6202b08: !Template
+    answer_choices: null
+    id: d45f6dc9-fe8b-4393-904d-ab71a6202b08
+    jinja: "Write a correct answer for the question. You should reason about academic\
+      \ literature and provide the correct answer. Avoid answers that provide incomplete\
+      \ justification for the question.\nNow Answer the question following example.\
+      \ \n{{question}} \n{{evidence}} \nWhat is answer? ||| Evidence: {{highlighted_evidence}}\n\
+      Answer: {{answer}}\n"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: write-a-correct-answer
+    reference: ''
+  f8af067b-6d40-4d63-8da9-fe97aa633ba0: !Template
+    answer_choices: null
+    id: f8af067b-6d40-4d63-8da9-fe97aa633ba0
+    jinja: "The task is to read the passage and question, then find the answer to\
+      \ the question. You should identify the shortest continuous text span from the\
+      \ passage that serves as an answer to the question.\nNow Answer the question\
+      \ following example. \n{{evidence}}\n{{question}} ||| \nEvidence: {{highlighted_evidence}}\n\
+      Answer: {{answer}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: the-task-is-to
+    reference: ''

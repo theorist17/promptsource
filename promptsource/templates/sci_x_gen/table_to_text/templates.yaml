@@ -1,0 +1,29 @@
+dataset: sci_x_gen
+subset: table_to_text
+templates:
+  f91cf3b0-8e15-4a3b-a871-13e0443a31ae: !Template
+    answer_choices: null
+    id: f91cf3b0-8e15-4a3b-a871-13e0443a31ae
+    jinja: 'The following is a latex-format table in a scientific document along with
+      a related section for the table. Generate a description for the given table.
+
+
+      ## Table
+
+      {{source}}
+
+
+      ## Related Sections
+
+      {{context}}
+
+      |||
+
+      {{target}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: generate
+    reference: ''

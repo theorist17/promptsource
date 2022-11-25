@@ -1,0 +1,25 @@
+dataset: arxiv_gen
+subset: abs_intro_2_title
+templates:
+  58f475a9-e122-4f2a-aa8b-8a9e7ed356a4: !Template
+    answer_choices: null
+    id: 58f475a9-e122-4f2a-aa8b-8a9e7ed356a4
+    jinja: 'Given an abstract and introduction of a scientific paper below, generate
+      a title for the paper.
+
+
+      {{input}}
+
+      |||
+
+      {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

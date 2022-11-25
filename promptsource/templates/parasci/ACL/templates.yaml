@@ -1,0 +1,30 @@
+dataset: parasci
+subset: ACL
+templates:
+  2f61ac56-8616-414c-bacf-b60b248bf184: !Template
+    answer_choices: null
+    id: 2f61ac56-8616-414c-bacf-b60b248bf184
+    jinja: 'In this task, you will be given a sentence. You should change the given
+      text into a different form, but maintain the meaning similar.
+
+
+      "{{sentence1}}" ||| {{sentence2}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Task Description
+    reference: ''
+  7605d40c-a772-4977-9b1c-b532a533c248: !Template
+    answer_choices: null
+    id: 7605d40c-a772-4977-9b1c-b532a533c248
+    jinja: 'Paraphrase the following phrase into another phrase: "{{sentence1}}" |||
+      {{sentence2}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Paraphrase
+    reference: ''

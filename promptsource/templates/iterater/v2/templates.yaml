@@ -1,0 +1,22 @@
+dataset: iterater
+subset: v2
+templates:
+  41480a00-a37e-4cba-84ff-62aa8441e90d: !Template
+    answer_choices: null
+    id: 41480a00-a37e-4cba-84ff-62aa8441e90d
+    jinja: 'Given an original sentence below, generate its revised sentence. Tag the
+      edit intention, which may be one of <clarity>, <fluency>,
+
+      <coherence>, or <style>.
+
+
+      {{before_sent}} ||| <{{labels}}> {{after_sent}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: task description
+    reference: ''

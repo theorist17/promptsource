@@ -1,0 +1,25 @@
+dataset: acl_arc
+templates:
+  5a46ce0a-98ba-4e81-96dd-6e4680f30866: !Template
+    answer_choices: Background|||Uses|||Motivation|||CompareOrContrast|||Future
+    id: 5a46ce0a-98ba-4e81-96dd-6e4680f30866
+    jinja: 'The following is a citation taken from a scientific paper.
+
+      "{{ text }}"
+
+      Is this citation describing a Background, Uses, Motivation, CompareOrContrast,
+      or Future?
+
+      |||
+
+      {{ label }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - AUC
+      - Accuracy
+      original_task: false
+    name: classify intent
+    reference: ''

@@ -1,0 +1,25 @@
+dataset: cl_lay_summ
+subset: abs
+templates:
+  e309fdcf-1984-4942-8c70-6b7861a3dff1: !Template
+    answer_choices: null
+    id: e309fdcf-1984-4942-8c70-6b7861a3dff1
+    jinja: 'The following is the abstract for the paper. Can you use it to generate
+      its summary?
+
+
+      {{document}}
+
+      |||
+
+      {{summary}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics:
+      - ROUGE
+      original_task: true
+    name: summarize
+    reference: ''

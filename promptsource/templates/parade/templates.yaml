@@ -1,0 +1,131 @@
+dataset: parade
+templates:
+  04559453-df56-4be3-94bb-0081665469fc: !Template
+    answer_choices: null
+    id: 04559453-df56-4be3-94bb-0081665469fc
+    jinja: "Sentence: {{definition1}}\nParaphrase: {{definition2}} \nWhat is the answer?\
+      \ ||| {{label}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: paraphrase classification
+    reference: ''
+  248deccd-d6da-4869-9aad-35b1b7d312ea: !Template
+    answer_choices: null
+    id: 248deccd-d6da-4869-9aad-35b1b7d312ea
+    jinja: 'Here are two sentences (sentence1 and sentence2). If these sentences have
+      the same meaning, answer "paraphrase", otherwise "non-paraphrase".
+
+      sentence1: {{definition1}}
+
+      sentence2: {{definition2}} ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - AUC
+      - Accuracy
+      original_task: true
+    name: definition
+    reference: ''
+  98c95505-26f3-4385-af32-978eedd790d0: !Template
+    answer_choices: null
+    id: 98c95505-26f3-4385-af32-978eedd790d0
+    jinja: Is the sentence "{{definition1}}" is a paraphrase to the sentence "{{definition2}}"?
+      If it is, answer "paraphrase", otherwise "non-paraphrase". ||| {{label}}
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - AUC
+      - Accuracy
+      original_task: false
+    name: doest sentence has a similar meaning?
+    reference: ''
+  9e0c03aa-e197-4906-809b-629e8d5516e0: !Template
+    answer_choices: null
+    id: 9e0c03aa-e197-4906-809b-629e8d5516e0
+    jinja: 'In this task, you will be given two sentences. You should decide if the
+      change in the given text creates a change in the meaning. If it does
+
+      answer "paraphrase", otherwise, "non-paraphrase".
+
+      {{definition1}}
+
+      {{definition2}}
+
+      What is the answer? ||| {{label}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: definition 3
+    reference: ''
+  a39d1801-948f-4a3e-b5b1-6cd7504eaeac: !Template
+    answer_choices: null
+    id: a39d1801-948f-4a3e-b5b1-6cd7504eaeac
+    jinja: Does the sentence "{{definition1}}" paraphrase (that is, mean the same
+      thing as) this sentence? "{{definition2}}" ||| {{label}}
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: mean-the-same-thing-as
+    reference: ''
+  aec211d7-86b9-458e-8c84-c94724e95d99: !Template
+    answer_choices: null
+    id: aec211d7-86b9-458e-8c84-c94724e95d99
+    jinja: 'Paraphrase detection
+
+      {{definition1}}
+
+      {{definition2}} ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: simple-prompt
+    reference: ''
+  d37887ca-5dfd-4298-a33f-fb3b2b5983bf: !Template
+    answer_choices: null
+    id: d37887ca-5dfd-4298-a33f-fb3b2b5983bf
+    jinja: 'sentence 1: {{definition1}}
+
+      sentence 2: {{definition2}}
+
+      Are the two sentences a paraphrase? Paraphrase or non-paraphrase? ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - AUC
+      - Accuracy
+      original_task: true
+    name: Are the two paraphrase?
+    reference: ''
+  ff5f17c0-82d3-48ad-b672-1e2a5a6fd62d: !Template
+    answer_choices: null
+    id: ff5f17c0-82d3-48ad-b672-1e2a5a6fd62d
+    jinja: "In this task, you are given a sentence pair from academic literature that\
+      \ have high lexical overlap. If the sentences have the same meaning and are\
+      \ just paraphrases of each other label them as \"paraphrase\", if not label\
+      \ them as \"non-paraphrase\". The two sentences are separated by a new line.\
+      \  Now Answer the question following example. \n{{definition1}} \n{{definition2}}\
+      \ ||| {{label}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: definition 2
+    reference: ''

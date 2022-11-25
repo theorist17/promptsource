@@ -1,0 +1,30 @@
+dataset: parasci
+subset: arXiv
+templates:
+  0b744509-cd75-457c-a134-7afb993334eb: !Template
+    answer_choices: null
+    id: 0b744509-cd75-457c-a134-7afb993334eb
+    jinja: 'Paraphrase the following phrase into another phrase: "{{sentence1}}" |||
+      {{sentence2}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Paraphrase
+    reference: ''
+  40109741-246d-4c56-9204-8b11199095b4: !Template
+    answer_choices: null
+    id: 40109741-246d-4c56-9204-8b11199095b4
+    jinja: 'In this task, you will be given a sentence. You should change the given
+      text into a different form, but maintain the meaning similar.
+
+
+      " {{sentence1}}" ||| {{sentence2}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Task Description
+    reference: ''

@@ -15,21 +15,6 @@ templates:
       original_task: true
     name: basic_task_description_like
     reference: Assume there is only one choice
-  08b9e913-a305-46e2-aa43-f1126d76cf55: !Template
-    answer_choices: null
-    id: 08b9e913-a305-46e2-aa43-f1126d76cf55
-    jinja: "Elaborate on the given summary: \n{{target |choice}}\n\nStart with following\
-      \ sentence: {{source[0]}}\n|||\n{{source | join(\" \")}}"
-    metadata: !TemplateMetadata
-      choices_in_prompt: false
-      languages:
-      - en
-      metrics:
-      - BLEU
-      - ROUGE
-      original_task: false
-    name: reverse_generation
-    reference: This template asks the model to hallucinate the abstract.
   16faf5c0-a0c5-488a-89dd-2989622b01dc: !Template
     answer_choices: null
     id: 16faf5c0-a0c5-488a-89dd-2989622b01dc

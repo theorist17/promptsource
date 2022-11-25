@@ -1,0 +1,24 @@
+dataset: arxiv_gen
+subset: intro_2_conc
+templates:
+  d47ff33f-7869-427c-8534-337bff9f7ccc: !Template
+    answer_choices: null
+    id: d47ff33f-7869-427c-8534-337bff9f7ccc
+    jinja: 'Given an introduction of a scientific paper below, generate a conclusion
+      that summarizes the introduction properly.
+
+      {{input}}
+
+      |||
+
+      {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

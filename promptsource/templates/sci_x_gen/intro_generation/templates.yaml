@@ -1,0 +1,32 @@
+dataset: sci_x_gen
+subset: intro_generation
+templates:
+  ccbc4ff2-63bc-4c68-99da-84f36641ae3a: !Template
+    answer_choices: null
+    id: ccbc4ff2-63bc-4c68-99da-84f36641ae3a
+    jinja: 'The following is an abstract for a target paper and titles of other papers
+      cited by the target paper. Generate an introduction for the given paper.
+
+
+      ## Abstract
+
+      {{source}}
+
+
+      ## The titles of cited papers
+
+      {{context}}
+
+      |||
+
+      {{target}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

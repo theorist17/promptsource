@@ -14,7 +14,7 @@ from jinja2 import BaseLoader, Environment, meta
 
 # Truncation of jinja template variables
 # 1710 = 300 words x 4.7 avg characters per word + 300 spaces
-TEXT_VAR_LENGTH = 2048
+TEXT_VAR_LENGTH = 2048 * 32
 
 # Local path to the folder containing the templates
 TEMPLATES_FOLDER_PATH = pkg_resources.resource_filename(__name__, "templates")

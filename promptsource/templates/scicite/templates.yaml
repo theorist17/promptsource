@@ -46,11 +46,10 @@ templates:
 
       {{ answer_choices[label] }}'
     metadata: !TemplateMetadata
-      choices_in_prompt: true
+      choices_in_prompt: false
       languages:
       - en
-      metrics:
-      - Other
+      metrics: []
       original_task: true
     name: Classify intent (choices first)
     reference: ''

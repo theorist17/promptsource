@@ -1,0 +1,21 @@
+dataset: kp20k
+subset: extraction
+templates:
+  1db360eb-38e7-488b-84e6-77df94359cb9: !Template
+    answer_choices: null
+    id: 1db360eb-38e7-488b-84e6-77df94359cb9
+    jinja: 'Given an abstract of a scientific paper below, generate a series of keywords
+      for the paper.
+
+
+      {{ document|join('' '')}} ||| {{ extractive_keyphrases | join('';'')}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: default
+    reference: ''

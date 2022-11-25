@@ -1,0 +1,72 @@
+dataset: peer_sum
+subset: review_response_pair
+templates:
+  53dfb087-a338-46fe-a4b0-47a7d22e269f: !Template
+    answer_choices: null
+    id: 53dfb087-a338-46fe-a4b0-47a7d22e269f
+    jinja: "Given a critical opinion from a peer researcher on your scientific paper,\
+      \ which may refute or raise some concerns about the paper, generate a response\
+      \ that will most likely be accepted and reconsidered by the reviewer.\nPaper\n\
+      {{title}} \n{{abstract}}\nReview\n{{review_text}}|||{{response_text}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: scientific-communication
+    reference: ''
+  5bbb282b-1634-4eb8-9657-56b30521c46d: !Template
+    answer_choices: null
+    id: 5bbb282b-1634-4eb8-9657-56b30521c46d
+    jinja: 'Given the title and abstract of a scientific paper along with a public
+      comment or review,  generate a review response.
+
+      {{title}}
+
+      {{abstract}}
+
+      {{review_text}} ||| {{response_text}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Task Definition
+    reference: ''
+  7864272b-6013-477c-9c77-4c6354de44ff: !Template
+    answer_choices: null
+    id: 7864272b-6013-477c-9c77-4c6354de44ff
+    jinja: 'In this task, you will be given a comment that ranks papers as accept
+      or reject. Read the following title and abstract of the paper, and generate
+      a good rebuttal so that reviewer may rate the paper higher. Address issues raised
+      by reviewer or justify the main argument.
+
+      Title: {{title}}
+
+      Abstract: {{abstract}}
+
+      Review comment: {{review_text}} ||| {{response_text}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Rebuttal
+    reference: ''
+  da559e81-bc13-4e26-8633-b8d3de7668b4: !Template
+    answer_choices: null
+    id: da559e81-bc13-4e26-8633-b8d3de7668b4
+    jinja: 'I got a review comment on my paper submission. How should I write a rebuttal?
+
+      Title: {{title}}
+
+      Abstract: {{abstract}}
+
+      Comment: {{review_text}}|||{{response_text}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: Simple Review
+    reference: ''

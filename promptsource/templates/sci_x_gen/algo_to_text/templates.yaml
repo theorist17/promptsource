@@ -1,0 +1,25 @@
+dataset: sci_x_gen
+subset: algo_to_text
+templates:
+  77040188-b789-4b3c-bb1c-d90dd4c06bee: !Template
+    answer_choices: null
+    id: 77040188-b789-4b3c-bb1c-d90dd4c06bee
+    jinja: 'The following is a latex format algorithm. Generate a text description
+      for the given algorithm.
+
+
+      {{source}}
+
+      |||
+
+      {{target}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

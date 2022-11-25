@@ -1,0 +1,92 @@
+dataset: scinli
+templates:
+  060e66a4-cf9c-4331-9f81-967749bfeec7: !Template
+    answer_choices: null
+    id: 060e66a4-cf9c-4331-9f81-967749bfeec7
+    jinja: 'Take the following as truth: {{sentence1}} Then the following statement:
+      {{sentence2}} is entailment, reasoning, contrasting, or neutral? ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: take-the-following-as-truth
+    reference: ''
+  46a23418-10ac-47d5-adef-7c47a67c6094: !Template
+    answer_choices: null
+    id: 46a23418-10ac-47d5-adef-7c47a67c6094
+    jinja: '"{{sentence1}}" Keeping in mind the above text, consider: "{{sentence2}}".
+      Is this always, sometimes, or never correct? Classify into entailment, reasoning,
+      contrasting, or neutral. ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: keeping-in-mind
+    reference: ''
+  614ddf0a-3db0-490b-9be5-ac8842b3e089: !Template
+    answer_choices: null
+    id: 614ddf0a-3db0-490b-9be5-ac8842b3e089
+    jinja: '{{sentence1}} Based on the previous passage, is it true that "{{sentence2}}"?
+      Entailment, reasoning, contrasting, or neutral? ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: based-on-the-previous-passage
+    reference: ''
+  724431ee-420d-46ee-92fe-c169b6f92c7a: !Template
+    answer_choices: entailment ||| reasoning ||| contrasting ||| neutral
+    id: 724431ee-420d-46ee-92fe-c169b6f92c7a
+    jinja: "{{sentence1}} \nDoes this imply that \"{{sentence2}}\"? Entailment, reasoning,\
+      \ contrasting, or neutral? ||| {{label}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      - AUC
+      original_task: true
+    name: does this imply
+    reference: Sanh et al. 2021
+  bd657357-aedf-48d1-ab0b-cb7804716b1d: !Template
+    answer_choices: null
+    id: bd657357-aedf-48d1-ab0b-cb7804716b1d
+    jinja: 'Given "{{sentence1}}", should we assume that "{{sentence2}}" is true?
+      Entailment, reasoning, contrasting, or neutral? ||| {{label}} '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: should-assume
+    reference: ''
+  c20c2c1a-622f-4db6-b428-eba7f4cb3f73: !Template
+    answer_choices: null
+    id: c20c2c1a-622f-4db6-b428-eba7f4cb3f73
+    jinja: '"{{sentence1}}" "{{sentence2}}" Does the first sentence imply the second
+      sentence? Entailment, reasoning, contrasting, or neutral? ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: first-imply-second
+    reference: ''
+  cf178b62-bb76-4354-b39c-31b4962a6d0d: !Template
+    answer_choices: entailment ||| reasoning ||| contrasting ||| neutral
+    id: cf178b62-bb76-4354-b39c-31b4962a6d0d
+    jinja: 'Given that {{sentence1}} Therefore, it must be true that "{{sentence2}}"?
+      Entailment, reasoning, contrasting, or neutral? ||| {{label}} '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: must be true
+    reference: Sanh et al. 2021

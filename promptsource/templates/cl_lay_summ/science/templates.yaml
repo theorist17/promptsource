@@ -1,0 +1,24 @@
+dataset: cl_lay_summ
+subset: science
+templates:
+  5eb71191-fb99-4fe1-bcac-7e214346f79e: !Template
+    answer_choices: null
+    id: 5eb71191-fb99-4fe1-bcac-7e214346f79e
+    jinja: 'Following are the abstract and introduction for the paper. Can you use
+      it to generate the summary?
+
+
+      {{document}}
+
+      |||
+
+      {{summary}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: summarize
+    reference: ''

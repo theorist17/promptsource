@@ -1,0 +1,28 @@
+dataset: citepred
+subset: title
+templates:
+  82d659b5-07fa-400f-a5b5-b671fe3f2ae8: !Template
+    answer_choices: True|||False
+    id: 82d659b5-07fa-400f-a5b5-b671fe3f2ae8
+    jinja: 'Given the title of a scientific document as a query text followed by the
+      title and abstract of another paper, predict if the the query text should cite
+      or not cite the target paper. Return "True" if it should cite, or "False" otherwise.
+
+
+      Query: {{query}}
+
+
+      Title: {{target_title}}
+
+      Abstract: {{target_abstract}}
+
+      |||
+
+      {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages: []
+      metrics: []
+      original_task: true
+    name: task description
+    reference: ''

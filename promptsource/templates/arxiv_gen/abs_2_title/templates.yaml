@@ -1,0 +1,25 @@
+dataset: arxiv_gen
+subset: abs_2_title
+templates:
+  173efb8b-9b04-4df9-baea-0ec0aa21a9d7: !Template
+    answer_choices: null
+    id: 173efb8b-9b04-4df9-baea-0ec0aa21a9d7
+    jinja: 'Given an abstract of a scientific paper below, generate a title for the
+      paper.
+
+
+      {{input}}
+
+      |||
+
+      {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: true
+    name: generate
+    reference: ''

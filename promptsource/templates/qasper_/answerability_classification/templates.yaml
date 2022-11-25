@@ -1,0 +1,31 @@
+dataset: qasper_
+subset: answerability_classification
+templates:
+  523b5055-1402-41e0-89e6-40f388aa8fd2: !Template
+    answer_choices: null
+    id: 523b5055-1402-41e0-89e6-40f388aa8fd2
+    jinja: "Given a passage in a scholarly document and a question, predict if the\
+      \ passage is related to the given question.\nPassage: {{evidence}} \nQuestion:\
+      \ {{question}} ||| {{answerability}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: definition
+    reference: ''
+  55855230-2bd1-4d43-9e04-c7750b0f5f98: !Template
+    answer_choices: null
+    id: 55855230-2bd1-4d43-9e04-c7750b0f5f98
+    jinja: 'Is the following passage related to the question?
+
+      Passage: {{evidence}}
+
+      Question: {{question}} ||| {{answerability}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: PQA
+    reference: ''

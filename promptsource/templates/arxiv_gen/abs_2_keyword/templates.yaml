@@ -1,0 +1,25 @@
+dataset: arxiv_gen
+subset: abs_2_keyword
+templates:
+  9c8496a2-7c49-4bee-acb1-d7538d1462ec: !Template
+    answer_choices: null
+    id: 9c8496a2-7c49-4bee-acb1-d7538d1462ec
+    jinja: 'Given an abstract of a scientific paper below, generate a series of keywords
+      for the paper.
+
+
+      {{input | replace("\n", "")}}
+
+      |||
+
+      {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

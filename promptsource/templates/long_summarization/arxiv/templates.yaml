@@ -1,0 +1,21 @@
+dataset: long_summarization
+subset: arxiv
+templates:
+  2469a6ad-b7ac-489a-8c5a-dab9df9cc523: !Template
+    answer_choices: null
+    id: 2469a6ad-b7ac-489a-8c5a-dab9df9cc523
+    jinja: 'The following is the full text of a paper (the first 10 sentences for
+      each section). Can you use it to generate its abstract?
+
+
+      {{document}} ||| {{summary}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: summarize
+    reference: ''

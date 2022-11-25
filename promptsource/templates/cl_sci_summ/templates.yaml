@@ -1,0 +1,23 @@
+dataset: cl_sci_summ
+templates:
+  5903154f-0ab7-4e0b-9ab9-3019a8d46378: !Template
+    answer_choices: null
+    id: 5903154f-0ab7-4e0b-9ab9-3019a8d46378
+    jinja: 'Following are the body text of a paper. Can you use it to generate the
+      summary?
+
+
+      {{document}}
+
+      |||
+
+      {{summary}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: summarize
+    reference: ''

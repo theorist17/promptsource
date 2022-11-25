@@ -1,0 +1,34 @@
+dataset: qasper_
+subset: evidence_classification
+templates:
+  51383cca-1d25-4ae0-aeec-a2e324af419a: !Template
+    answer_choices: null
+    id: 51383cca-1d25-4ae0-aeec-a2e324af419a
+    jinja: "Given a passage in a scholarly document and a question, predict if the\
+      \ passage is related to the given question.\n{{passage}} \n{{question}} |||\
+      \ {{cls_label}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: definition
+    reference: ''
+  93468302-f618-48f4-ba23-6caa56cd3159: !Template
+    answer_choices: null
+    id: 93468302-f618-48f4-ba23-6caa56cd3159
+    jinja: "Is the following passage related to the question?\n{{passage}} \n{{question}}\
+      \ ||| {{cls_label}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: PQB
+    reference: ''

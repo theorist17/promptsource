@@ -1,0 +1,15 @@
+dataset: iterater
+subset: human_doc
+templates:
+  963b278a-d623-4d42-8c94-379158fb697c: !Template
+    answer_choices: null
+    id: 963b278a-d623-4d42-8c94-379158fb697c
+    jinja: "Given a source document to be revised, generate the target document that\
+      \ has been revised. \n\n{{before_revision}} ||| {{after_revision}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: true
+    name: task description
+    reference: ''

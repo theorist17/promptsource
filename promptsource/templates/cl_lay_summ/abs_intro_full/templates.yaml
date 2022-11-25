@@ -1,0 +1,24 @@
+dataset: cl_lay_summ
+subset: abs_intro_full
+templates:
+  8b7249a9-b2b3-4481-b391-8ea67d8906fb: !Template
+    answer_choices: null
+    id: 8b7249a9-b2b3-4481-b391-8ea67d8906fb
+    jinja: 'Following are the abstract and introduction for the paper. Can you use
+      it to generate the summary?
+
+
+      {{document}}
+
+      |||
+
+      {{summary}}
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: summarize
+    reference: ''

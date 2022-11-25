@@ -1,0 +1,34 @@
+dataset: cite_pred_s
+templates:
+  147baf49-65da-498a-a198-9fb0ffe9fa3c: !Template
+    answer_choices: null
+    id: 147baf49-65da-498a-a198-9fb0ffe9fa3c
+    jinja: 'Given a statement in a scientific document and the title and abstract
+      for a target paper, predict whether the statement sentence should cite or not
+      cite the target paper. Return "True" if it should the statement cites the paper,
+      or "False" otherwise.
+
+
+      The statement in the source paper.
+
+      {{statement}}
+
+
+      The title and abstract of the target paper.
+
+      {{target}}
+
+      |||
+
+      {{label}}
+
+
+      '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics:
+      - Accuracy
+      original_task: false
+    name: task description
+    reference: ''

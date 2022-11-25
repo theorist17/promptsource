@@ -1,0 +1,24 @@
+dataset: cite_sum
+templates:
+  ebcefbb0-749e-4c6f-8925-3cd4c4d92e2e: !Template
+    answer_choices: null
+    id: ebcefbb0-749e-4c6f-8925-3cd4c4d92e2e
+    jinja: 'Given the abstract of a scientific document, generate a summary (TLDR)
+      for the paper.
+
+
+      {{src}}
+
+      |||
+
+      {{tgt}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: default
+    reference: ''

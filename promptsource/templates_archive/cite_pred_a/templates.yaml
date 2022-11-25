@@ -1,0 +1,30 @@
+dataset: cite_pred_a
+templates:
+  d6841efc-93f7-4185-9a65-4d7e3001756e: !Template
+    answer_choices: null
+    id: d6841efc-93f7-4185-9a65-4d7e3001756e
+    jinja: 'Given the abstract of a scientific document as a source paper and the
+      title and abstract of a target paper, predict if the the source paper should
+      cite or not cite the target paper. Return "True" if it should the statement
+      cites the paper, or "False" otherwise.
+
+
+      The abstract of the source paper.
+
+      {{query}}
+
+
+      The title and abstract of the target paper.
+
+      {{target}}
+
+      |||
+
+      {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: task description
+    reference: ''

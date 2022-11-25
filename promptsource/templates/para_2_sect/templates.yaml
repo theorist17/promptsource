@@ -1,0 +1,19 @@
+dataset: para_2_sect
+templates:
+  122da6cd-84a5-4c52-b098-b065a7b00faf: !Template
+    answer_choices: null
+    id: 122da6cd-84a5-4c52-b098-b065a7b00faf
+    jinja: 'Given a section text of a scientific paper, generate a good section title.
+
+
+      {{input}} ||| {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

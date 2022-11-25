@@ -1,0 +1,101 @@
+dataset: peer_sum
+templates:
+  26e8e416-a5f1-465b-a5c4-d93e4d252502: !Template
+    answer_choices: null
+    id: 26e8e416-a5f1-465b-a5c4-d93e4d252502
+    jinja: 'The following is a title and abstract of a scientific paper, along with
+      reviews from official reviewers and public commenters.
+
+      Generate a metareview that summarizes all the official reviews.
+
+
+      Title
+
+      {{title}}
+
+
+      Abstract
+
+      {{abstract}}
+
+
+      {{review_text}}
+
+
+      {{comment_text}}
+
+      |||
+
+      {{meta_review}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: generate (only review + comment)
+    reference: ''
+  63d5b983-b818-4bc5-afb4-51c19a0c78a6: !Template
+    answer_choices: null
+    id: 63d5b983-b818-4bc5-afb4-51c19a0c78a6
+    jinja: 'The following is a title and abstract of a scientific paper, along with
+      reviews  from official reviewers.
+
+      Generate a metareview that summarizes all the reviews.
+
+
+      Title
+
+      {{title}}
+
+
+      Abstract
+
+      {{abstract}}
+
+
+      {{review_text}}
+
+      |||
+
+      {{meta_review}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: generate (only review)
+    reference: ''
+  9861ab64-ee93-4f14-adaa-2fdd80e17d01: !Template
+    answer_choices: null
+    id: 9861ab64-ee93-4f14-adaa-2fdd80e17d01
+    jinja: 'The following is a title and abstract of a scientific paper, along with
+      a review discussion between reviewer and author.
+
+      Generate a metareview that summarizes all the official reviews.
+
+
+      Title
+
+      {{title}}
+
+
+      Abstract
+
+      {{abstract}}
+
+
+      {{review_reponse_text}}
+
+      {{comment_response_text}}
+
+
+      |||
+
+      {{meta_review}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: generate
+    reference: ''

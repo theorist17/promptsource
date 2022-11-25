@@ -1,0 +1,21 @@
+dataset: kp20k
+subset: generation
+templates:
+  123c9504-59cd-46ae-b2df-16e7db221183: !Template
+    answer_choices: null
+    id: 123c9504-59cd-46ae-b2df-16e7db221183
+    jinja: 'Given an abstract of a scientific paper below, generate a series of keywords
+      for the paper.
+
+
+      {{ document|join('' '')}} ||| {{ abstractive_keyphrases | join('';'')}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: default
+    reference: ''

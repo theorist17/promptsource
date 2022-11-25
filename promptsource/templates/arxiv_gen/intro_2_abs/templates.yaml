@@ -1,0 +1,25 @@
+dataset: arxiv_gen
+subset: intro_2_abs
+templates:
+  4aa0f16b-6f14-43e9-817f-75b9e553d1e6: !Template
+    answer_choices: null
+    id: 4aa0f16b-6f14-43e9-817f-75b9e553d1e6
+    jinja: 'Given an introduction of a scientific paper below, generate an abstract
+      that summarizes the paper properly.
+
+
+      {{input}}
+
+      |||
+
+      {{output}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: generate
+    reference: ''

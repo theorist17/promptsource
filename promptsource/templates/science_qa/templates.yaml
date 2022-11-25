@@ -1,0 +1,26 @@
+dataset: science_qa
+templates:
+  4afeb683-1e58-416b-96ef-e5006796f278: !Template
+    answer_choices: null
+    id: 4afeb683-1e58-416b-96ef-e5006796f278
+    jinja: 'Given a passage below, answer the following question.
+
+
+      {{passage}}
+
+
+      {{question}}
+
+      |||
+
+      {{answer}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: false
+    name: pqa
+    reference: ''

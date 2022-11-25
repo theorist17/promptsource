@@ -1,0 +1,32 @@
+dataset: sci_x_gen
+subset: theorem_to_text
+templates:
+  319f7222-44ce-4bb8-9718-41a1abb4a8dc: !Template
+    answer_choices: null
+    id: 319f7222-44ce-4bb8-9718-41a1abb4a8dc
+    jinja: 'The following is a latex-format theorem in a scientific paper along with
+      related sections for the theorem. Generate a description for the given theorem.
+
+
+      ## Theorem
+
+      {{source}}
+
+
+      ## Related Sections
+
+      {{context}}
+
+      |||
+
+      {{target}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - BLEU
+      - ROUGE
+      original_task: true
+    name: generate
+    reference: ''

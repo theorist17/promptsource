@@ -26,6 +26,7 @@ from promptsource.utils import (
     renameDatasetColumn,
     render_features,
 )
+import json
 
 
 DATASET_INFOS_CACHE_DIR = os.path.join(DEFAULT_PROMPTSOURCE_CACHE_HOME, "DATASET_INFOS")
@@ -76,6 +77,8 @@ def format_language(tag):
 # Check https://github.com/streamlit/streamlit/issues/337 for more information.
 parser = argparse.ArgumentParser(description="run app.py with args")
 parser.add_argument("-r", "--read-only", action="store_true", help="whether to run it as read-only mode")
+# parser.add_argument("-t", "--template_path", type=str, default="", help="path to load template ")
+# parser.add_argument("-d", "--dataset_path", type=str, default="", help="path to load dataset")
 
 args = parser.parse_args()
 if args.read_only:
@@ -202,20 +205,26 @@ def run_app():
                 all_infos[dataset_name] = infos
             else:
                 infos = all_infos[dataset_name]
-            if infos:
-                if subset_name is None:
-                    subset_infos = infos[list(infos.keys())[0]]
-                else:
-                    subset_infos = infos[subset_name]
+            try:
+                if infos:
+                    if subset_name is None:
+                        subset_infos = infos[list(infos.keys())[0]]
+                    else:
+                        subset_infos = infos[subset_name]
 
-                try:
-                    split_sizes = {k: v.num_examples for k, v in subset_infos.splits.items()}
-                except Exception:
-                    # Fixing bug in some community datasets.
-                    # For simplicity, just filling `split_sizes` with nothing, so the displayed split sizes will be 0.
+                    try:
+                        split_sizes = {k: v.num_examples for k, v in subset_infos.splits.items()}
+                    except Exception:
+                        # Fixing bug in some community datasets.
+                        # For simplicity, just filling `split_sizes` with nothing, so the displayed split sizes will be 0.
+                        split_sizes = {}
+                else:
                     split_sizes = {}
-            else:
-                split_sizes = {}
+            except:
+                print('==========================')
+                print('dataset_name', dataset_name)
+                print('subset_name', subset_name)
+                print('infos', infos)
 
             # Collect template counts, original task counts and names
             dataset_templates = template_collection.get_dataset(dataset_name, subset_name)
@@ -281,7 +290,12 @@ def run_app():
         #
 
         dataset_list = list_datasets()
-        ag_news_index = dataset_list.index("ag_news")
+        
+        with open('/home/hongin_lee/data3/aristo/aristo/data/data_manager.json') as f:
+            aristo_list = sorted([info['hf_task'] for task, info in json.loads(f.read()).items()])
+            
+        dataset_list = [*aristo_list, *dataset_list]
+        ag_news_index = dataset_list.index("acl_arc")
 
         #
         # Select a dataset - starts with ag_news

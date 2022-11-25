@@ -1,0 +1,22 @@
+dataset: citeworth
+templates:
+  42fde6a8-da69-4211-a5c7-d690b85579a5: !Template
+    answer_choices: check-worthy|||non-check-worthy
+    id: 42fde6a8-da69-4211-a5c7-d690b85579a5
+    jinja: 'Does the following sentence need a check for a citation? If it needs a
+      citation, answer "check-worthy", otherwise "non-check-worthy".
+
+
+      {{text}}
+
+      ||| {{label}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - AUC
+      - Accuracy
+      original_task: false
+    name: default
+    reference: ''
